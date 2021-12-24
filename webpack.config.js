@@ -11,7 +11,9 @@ module.exports = {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
     },
-
+    devServer: {
+        static: './dist'
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: 'GeekBrain Shop JS2',
@@ -19,5 +21,14 @@ module.exports = {
             filename: 'index.html', // название выходного файла
         }),
     ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
+    },
+    mode: 'none'
 
 }

@@ -1,5 +1,7 @@
 import getProductList from "./mock/data.js";
 import renderGoodsList from "./showcase.js";
+import './style/style.css';
+
 // присваем перемменной созданный массив
 const productList = getProductList(20);
 
